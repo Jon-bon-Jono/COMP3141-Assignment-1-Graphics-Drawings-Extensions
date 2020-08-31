@@ -17,15 +17,20 @@ Sequential composition
 
 Bounded Looping
 - `loop :: Int -> Instructions -> Instructions`
+- `tortoise (loop n i) start = foldr comp nop (replicate n (tortoise i)) start`
 
 Invisibility 
 - `invisibly :: Instructions -> Instructions`
+- `tortoise (invisibly i) start = ([],finalState i)`
 
 Retracing Backwards
 - `retrace :: Instructions -> Instructions`
+- `tortoise (retrace i) (finalState i) = (reverse (tortoisePic i), start)`
 
 Overlaying Images
 - `overlay :: [Instructions] -> Instructions`
+- `finalState (overlay is) = start`
+- `tortoisePic (overlay is) = concatMap tortoisePic is`
 
 ## Usage:
 Build:
