@@ -7,3 +7,9 @@ COMP3141 (Software System Design and Implementation) Assignment 1, implement a v
 - Tortoise.hs: definitions for the syntax and semantics of the TortoiseGraphics Language
 - TortoiseGraphics.hs: graphical backend (using the rasterific library) for the Tortoise Graphics Language, to actually visualise gaphics
 - TortoiseCombinators.hs: stubs for the additional functions you are requiredto implement 
+
+## Usage:
+Build:
+- `stack build`
+Test against all quickCheck properties:
+- `stack exec TortoiseTests`
