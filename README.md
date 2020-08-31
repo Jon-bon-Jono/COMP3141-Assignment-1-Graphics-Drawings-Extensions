@@ -11,6 +11,21 @@ COMP3141 (Software System Design and Implementation) Assignment 1, implement a v
 ## Combinators:
 Sequential composition
 - `andThen :: Instructions -> Instructions -> Instructions`
+- `Stop ‘andThen‘ i = i`
+- `i ‘andThen‘ Stop = i`
+- `i1 ‘andThen‘ (i2 ‘andThen‘ i3) = (i1 ‘andThen‘ i2) ‘andThen‘ i3`
+
+Bounded Looping
+- `loop :: Int -> Instructions -> Instructions`
+
+Invisibility 
+- `invisibly :: Instructions -> Instructions`
+
+Retracing Backwards
+- `retrace :: Instructions -> Instructions`
+
+Overlaying Images
+- `overlay :: [Instructions] -> Instructions`
 
 ## Usage:
 Build:
