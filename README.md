@@ -11,5 +11,11 @@ COMP3141 (Software System Design and Implementation) Assignment 1, implement a v
 ## Usage:
 Build:
 - `stack build`
+
+Run the program from‘Main.hs’, which saves an image tortoise.png:
+- `stack exec Tortoise`
+
 Test against all quickCheck properties:
 - `stack exec TortoiseTests`
+
+
